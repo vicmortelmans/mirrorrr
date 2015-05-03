@@ -236,6 +236,6 @@ class MirrorHandler(BaseHandler):
 app = webapp2.WSGIApplication([
   (r"/", HomeHandler),
   (r"/main", HomeHandler),
-  (r"/([^/]+).*", MirrorHandler),
+  (r"/googledrive.com/host/([^/]+).*", MirrorHandler),  # VIC added path to avoid abuse by porn sites
   (r"/warmup", WarmupHandler),
 ], debug=DEBUG)
